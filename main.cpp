@@ -76,11 +76,11 @@ class HelloTriangleApplication {
 	}
 
 	void cleanup() {
-	    // Make sure instance is destroyed before instance!
+	    vkDestroyDevice(device, nullptr);
+	    // Make sure surface is destroyed before instance!
 	    vkDestroySurfaceKHR(instance, surface, nullptr);
 	    vkDestroyInstance(instance, nullptr);
 	    glfwDestroyWindow(window);
-	    vkDestroyDevice(device, nullptr);
 
 	    glfwTerminate();
 	}
@@ -231,7 +231,7 @@ class HelloTriangleApplication {
 	    // https://vulkan-tutorial.com/en/Drawing_a_triangle/Setup/Physical_devices_and_queue_families)
 	    QueueFamilyIndices indices = findQueueFamilies(device);
 
-	    return indices.graphicsFamily.has_value();
+	    return indices.isComplete();
 	}
 
 
