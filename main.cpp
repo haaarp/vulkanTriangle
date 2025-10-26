@@ -259,7 +259,7 @@ class HelloTriangleApplication {
 
 	    return true;
 	}
-	QueueFamilyIndices findQueueFamilies (VkPhysicalDevice device) {
+	QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device) {
 	    QueueFamilyIndices indices;
 
 	    uint32_t queueFamilyCount = 0;
@@ -274,6 +274,7 @@ class HelloTriangleApplication {
 		    indices.graphicsFamily = i;
 		}
 
+		// Check present support for THIS queue family
 		VkBool32 presentSupport = false;
 		vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &presentSupport);
 
