@@ -3,7 +3,8 @@
 My walkthrough of the vulkan tutorial from https://vulkan-tutorial.com/Introduction
 
 > [!WARNING]  
-> Wayland is not yet implemented. Use X11 instead for now.
+> Wayland is not yet implemented by me. To implement it use:
+> https://amini-allight.org/post/using-wayland-with-vulkan
 
 ## Development Setup
 
