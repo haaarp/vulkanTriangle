@@ -13,3 +13,15 @@ $ sudo zypper in glm-devel vulkan-devel shaderc libXi-devel libglfw-devel libXxf
 
 </details>
 
+<details>
+  <summary><h3>Arch Linux</h3></summary>
+  
+  <pre><code>
+$ sudo pacman -Syu vulkan-devel glfw glm libxi libxxf86vm
+  </code></pre>
+
+</details>
+
+After you have installed the necessary packages, run `vkcube` to see if Vulkan
+works.
+
