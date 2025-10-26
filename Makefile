@@ -6,13 +6,20 @@ DBGCFLAGS = -std=c++17 -O0 -g -DNDEBUG
 VulkanTest: main.cpp
 	g++ $(CFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
 
-.PHONY: test clean debug
+DevVulkanTest: development-setup-test.cpp
+	g++ $(CFLAGS) -o DevVulkanTest development-setup-test.cpp $(LDFLAGS)
+
+.PHONY: test clean debug testDev
+
+testDev: DevVulkanTest
+	./DevVulkanTest
 
 test: VulkanTest
 	./VulkanTest
 
 clean:
-	rm -f VulkanTest
+	rm -f VulkanTest DevVulkanTest
 
 debug:
 	g++ $(DBGCFLAGS) -o VulkanTest main.cpp $(LDFLAGS)
+
