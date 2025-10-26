@@ -2,6 +2,9 @@
 
 My walkthrough of the vulkan tutorial from https://vulkan-tutorial.com/Introduction
 
+> [!WARNING]  
+> Wayland is not yet implemented. Use X11 instead for now.
+
 ## Development Setup
 
 <details>
